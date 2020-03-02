@@ -10,13 +10,13 @@ const AppBar = () => {
             <Container className="tool-bar">
                 <Logo />
                 <div className="social-networks">
-                    <a href="#" >
+                    <a href="/#" >
                         <i className="fab fa-facebook-square"></i>
                     </a>
-                    <a href="#" >
+                    <a href="/#" >
                         <i className="fab fa-instagram-square"></i>
                     </a>
-                    <a href="#" >
+                    <a href="/#" >
                         <i className="fab fa-twitter-square"></i>
                     </a>
                 </div>
