@@ -19,8 +19,10 @@ h1 {
 body {
   background-image: url('/images/shop-by-ashim-dsilva.jpg');
   background-repeat: no-repeat;
-  background-size: 980px;
+  background-size: 1150px;
   position: relative;
+  background-position-x: -100px;
+  background-position-y: -100px;
   @media (min-width: 500px) {
     background-size: 1000px;
   }
@@ -30,7 +32,7 @@ body {
   &::before {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 960px;
     content: "";
     background-color: rgba($color: #000000, $alpha: 0.5);
     box-shadow: inset 0 0 8rem rgba(0, 0, 0, 1);
