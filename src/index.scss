@@ -29,6 +29,7 @@ body {
   }
   @media (min-width: 1024px) {
     background-size: cover;
+    overflow: hidden;
   }
   &::before {
     position: absolute;
