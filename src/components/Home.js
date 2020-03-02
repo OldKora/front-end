@@ -26,8 +26,14 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     height: 100%;
-    padding-top: 30px;
+    padding: 30px 0 88px;
     color: ${colors.white};
+    @media (min-width: 375px) {
+        padding: 100px 0 213px;
+    }
+    @media (min-width: 375px) {
+        padding: 100px 0 225px;
+    }
     h1 {
         font-size: 1.5rem;
         font-weight: bold;

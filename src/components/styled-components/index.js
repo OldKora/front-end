@@ -25,6 +25,9 @@ export const Input = styled.input`
     &:focus {
         box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.8)
     }
+    @media (min-width: 600px) {
+        padding-right: 26%;
+    }
     
 `
 
