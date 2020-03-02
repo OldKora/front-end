@@ -25,7 +25,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     padding-top: 30px;
     color: ${colors.white};
     h1 {

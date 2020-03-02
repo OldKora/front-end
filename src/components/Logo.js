@@ -16,7 +16,6 @@ const Wrapper = styled.div`
     .logo > * {
         font-family: 'bauhaus_93regular';
         font-size: 2.5rem;
-        letter-spacing: -1.3px;
         color: transparent;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: ${colors.white};
@@ -29,7 +28,7 @@ const Wrapper = styled.div`
         }
         &__letters-old {
             position: absolute;
-            top: 11px;
+            top: 10.5px;
             right: 0;
             font-size: 0.8rem;
             font-family: 'Montserrat';
