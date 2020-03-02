@@ -28,6 +28,7 @@ const AppBar = () => {
 const Wrapper = styled.div`
     padding: 0.5rem 0;
     box-shadow: 0 0.25rem 0.125rem 0 rgba(0,0,0,0.05);
+    z-index: 900;
     .tool-bar {
         display: flex;
         justify-content: space-between;
@@ -38,7 +39,7 @@ const Wrapper = styled.div`
         a {
             font-size: 2rem;
             margin-right: 10px;
-            color: ${colors.primary};
+            color: ${colors.white};
             &:last-child {
                 margin-right: 0;
             }
