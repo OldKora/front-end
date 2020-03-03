@@ -43,7 +43,7 @@ const Home = () => {
             <h1>We are launching in</h1>
             <Countdown />
             <p className="caption">
-                We are working hard on our awesome online shop.
+                OldKora is an online store specialized in the sale of printed African motifs t-shirts and hoodies. 
                 Please subscribe to be notify when the website will be online. <span>Thank you!</span>
             </p>
             <div className="actions">
