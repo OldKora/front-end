@@ -28,7 +28,7 @@ const Countdown = () => {
             && duration.minutes === 0
             && duration.seconds === 0
             ) return clearInterval(intervale);
-        
+        //return clearInterval(intervale);
     }, [duration]);
     return(
         <div className="countdown">

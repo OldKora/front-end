@@ -58,3 +58,15 @@ export const Button = styled.button`
         }
     }
 `
+
+export const Message = styled.p`
+    width: 100%;
+    padding: 5px;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    transition: ease .5s;
+    color: #fff;
+    ${props => props.type === 'error' ?
+    `background: rgba(207,0,15,0.5);` : 'background: rgba(0,255,0,0.3);'
+    }
+`;

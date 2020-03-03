@@ -1,10 +1,43 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Countdown from './Countdown';
 import { colors } from '../theme';
-import { Input, Button } from './styled-components';
+import { Input, Button, Message } from './styled-components';
+import { db } from './../lib/firebase';
+import * as Yup from 'yup';
 
 const Home = () => {
+    const [email, setEmail] =  useState('');
+    const [errors, setErrors] = useState({});
+    const [success, setSuccess] = useState(false);
+
+    const schema = Yup.object().shape({
+        email: Yup.string()
+            .trim()
+            .email()
+            .required()
+    });
+
+    const handleCHnage = e => {
+        setEmail(e.target.value);
+    }
+
+    const onSubscribe = e => {
+        e.preventDefault();
+        schema.validate({email}).then(res => {
+            db.collection('subscribers').add(res).then(res => {
+                setSuccess(true);
+                setEmail('')
+            }).catch(err => setErrors({message: err.message}));
+        }).catch(err => setErrors(err))
+    }
+    // useEffect(() => {
+    //     db.collection('subscribers').get().then(querySnapshot => {
+    //         querySnapshot.forEach(doc => {
+    //             console.log(doc.data())
+    //         })
+    //     }).catch(err => console.log(err));
+    // }, [])
     return(
         <Wrapper>
             <h1>We are launching in</h1>
@@ -14,8 +47,14 @@ const Home = () => {
                 Please subscribe to be notify when the website will be online. <span>Thank you!</span>
             </p>
             <div className="actions">
-                <Input placeholder="Your email address" />
-                <Button>Notify Me</Button>
+                {errors.message && 
+                    <Message type="error">{errors.message}</Message>
+                }
+                {success && 
+                    <Message type="success">Thank you for subscribe, we will notify you when the webiste will be online.</Message>
+                }
+                <Input value={email} onChange={handleCHnage} placeholder="Your email address" />
+                <Button onClick={onSubscribe}>Notify Me</Button>
             </div>
         </Wrapper>
     )
