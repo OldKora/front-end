@@ -69,4 +69,8 @@ export const Message = styled.p`
     ${props => props.type === 'error' ?
     `background: rgba(207,0,15,0.5);` : 'background: rgba(0,255,0,0.3);'
     }
+
+    @media (min-width: 1024px) {
+            width: 75%;       
+    }
 `;

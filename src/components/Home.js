@@ -46,14 +46,14 @@ const Home = () => {
                 OldKora is an online store specialized in the sale of printed African motifs t-shirts and hoodies. 
                 Please subscribe to be notify when the website will be online. <span>Thank you!</span>
             </p>
+            {errors.message && 
+                <Message type="error">{errors.message}</Message>
+            }
+            {success && 
+                <Message type="success">Thank you for subscribe, we will notify you when the webiste will be online.</Message>
+            }
             <div className="actions">
-                {errors.message && 
-                    <Message type="error">{errors.message}</Message>
-                }
-                {success && 
-                    <Message type="success">Thank you for subscribe, we will notify you when the webiste will be online.</Message>
-                }
-                <Input value={email} onChange={handleCHnage} placeholder="Your email address" />
+                <Input type="email" name="email" value={email} onChange={handleCHnage} placeholder="Your email address" />
                 <Button onClick={onSubscribe}>Notify Me</Button>
             </div>
         </Wrapper>
